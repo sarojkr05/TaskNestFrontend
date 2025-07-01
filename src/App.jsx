@@ -1,10 +1,17 @@
+import { Route, Routes } from "react-router-dom"
 import HomePage from "./pages/HomePage"
+import TaskPage from "./pages/TaskPage"
+import Signup from "./pages/Signup"
+import Login from "./pages/Login"
 
 function App() {
   return (
-    <div>
-      <HomePage />
-    </div>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/tasks" element={<TaskPage />} />
+      <Route path="/signup" element={<Signup />} />
+      <Route path="/login" element={<Login />} />
+    </Routes>
   )
 }
 
