@@ -8,7 +8,6 @@ const initialState = {
     data: storedData && storedData !== "undefined" ? JSON.parse(storedData) : {},
 }
 
-
 export const createAccount = createAsyncThunk("signup", async (data)=> {
     console.log("incoming data tot the thunk", data)
     try {
@@ -26,7 +25,6 @@ export const createAccount = createAsyncThunk("signup", async (data)=> {
 })
 
 export const login = createAsyncThunk("auth/login", async (data)=> {
-    console.log("incoming data tot the thunk", data)
     try {
         const response = await axiosInstace.post("/auth/login", data)
         console.log("res from back", response)

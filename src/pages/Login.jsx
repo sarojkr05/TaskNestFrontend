@@ -1,7 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import Layout from "../layout/layout";
 import { useState } from "react";
-import { createAccount, login } from "../redux/slices/authSlices";
+import { login } from "../redux/slices/authSlices";
 import { useDispatch } from "react-redux";
 function Login() {
   const dispatch = useDispatch();

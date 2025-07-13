@@ -3,9 +3,10 @@ import Layout from "../layout/layout";
 import { useState } from "react";
 import { createAccount } from "../redux/slices/authSlices";
 import { useDispatch } from "react-redux";
+import { toast } from "react-toastify";
 function Signup() {
-    const dispatch = useDispatch();
-    const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -18,10 +19,21 @@ function Signup() {
   }
 
   async function handleSubmit(e) {
-    e.preventDefault();
+    e.preventDefault(); // It prevents the default form submission behavior
+    // Form Validations
+    // if (
+    //   !formData.firstName ||
+    //   !formData.lastName ||
+    //   !formData.email ||
+    //   !formData.password
+    // ) {
+    //   toast.error("Every fields are required!");
+    // }
+
     const apiResponse = await dispatch(createAccount(formData));
+    console.log("Res from backend", apiResponse)
     if (apiResponse?.payload?.success) {
-      navigate("/");
+      navigate("/login");
     }
   }
 

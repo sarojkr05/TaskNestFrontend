@@ -3,12 +3,14 @@ import HomePage from "./pages/HomePage"
 import TaskPage from "./pages/TaskPage"
 import Signup from "./pages/Signup"
 import Login from "./pages/Login"
+import ProjectPage from "./pages/ProjectPage"
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/tasks" element={<TaskPage />} />
+      <Route path="/projects" element={<ProjectPage />} />
       <Route path="/signup" element={<Signup />} />
       <Route path="/login" element={<Login />} />
     </Routes>
