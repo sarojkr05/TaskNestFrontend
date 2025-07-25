@@ -1,7 +1,16 @@
 import { Typewriter } from "react-simple-typewriter";
 import Layout from "../layout/layout";
+import { useState } from "react";
 
 function HomePage() {
+
+  // const [formData, setFormData] = useState({
+  //   name: "",
+  //   age: "",
+  //   email: "",
+  //   password: ""
+  // })
+
   return (
     <>
       <Layout>
